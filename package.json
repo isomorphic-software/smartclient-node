@@ -1,0 +1,35 @@
+{
+    "name": "smartclient-node",
+    "version": "0.0.1",
+    "description": "SmartClient server side implementation in Node.js ",
+    "keywords": [],
+    "license": "LGPL-3.0",
+    "author": {
+        "name": "Aleksandras Novikovas",
+        "email": "Aleksandras.Novikovas@gmail.com",
+        "url": "http://www.smartclient.com/"
+    },
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/isomorphic-software/smartclient-node.git"
+    },
+    "scripts": {
+        "install": "node install.js"
+    },
+    "bin": {
+        "smartclient-install":  "./install.js",
+        "smartclient-server":  "./server.js"
+    },
+    "dependencies": {
+        "fs-extra": "^2.1.2",
+        "unzip": "^0.1.11",
+        "srv-core": "git://github.com/Aleksandras-Novikovas/srv-core.git",
+        "srv-config": "git://github.com/Aleksandras-Novikovas/srv-config.git",
+        "srv-log": "git://github.com/Aleksandras-Novikovas/srv-log.git",
+        "srv-server": "git://github.com/Aleksandras-Novikovas/srv-server.git",
+        "srv-util": "git://github.com/Aleksandras-Novikovas/srv-util.git",
+        "smartclient-rpc": "git://github.com/isomorphic-software/smartclient-rpc.git"
+    },
+    "devDependencies": {}
+}

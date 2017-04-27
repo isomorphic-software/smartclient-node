@@ -1,0 +1,5 @@
+# NetBeans project
+nbproject
+
+# Dependency directories
+node_modules

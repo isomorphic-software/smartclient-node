@@ -1,0 +1,6 @@
+# https://www.sitepoint.com/how-to-use-ssltls-with-node-js/
+
+openssl genpkey -out server.enc.key -des3 -algorithm RSA -pkeyopt rsa_keygen_bits:2048
+openssl req -new -key server.enc.key -out server.csr
+openssl rsa -in server.enc.key -out server.key
+openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
