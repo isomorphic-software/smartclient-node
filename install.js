@@ -94,7 +94,7 @@ class Install {
                         const tmpDirName = path.join(__dirname, Const.TMP);
                         fs.ensureDirSync(tmpDirName);
                         const zipFileName = path.join(tmpDirName, Const.SMART_CLIENT_ZIP);
-                        console.log("Downloading SmarClient runtim from " + Const.SMART_CLIENT_LINK);
+                        console.log("Downloading SmarClient runtime from " + Const.SMART_CLIENT_LINK);
                         const request = http.get(Const.SMART_CLIENT_LINK, function(response) {
                             if (response.statusCode !== 200) {
                                 console.error("Failed to download SmartClient runtime from: " + Const.SMART_CLIENT_LINK);
