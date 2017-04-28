@@ -1,0 +1,15 @@
+<DataSource
+    ID="jsonUsersDS"
+    serverType="json"
+    fileName="data/jsonUsersDS.json"
+>
+
+    <fields>
+        <field name="userId"        type="text"     title="User Id"     required="true" primaryKey="true" />
+        <field name="firstName"     type="text"     title="First name"  required="true" />
+        <field name="lastName"      type="text"     title="Last name"   required="true" />
+        <field name="age"           type="number"   title="Age" />
+        <field name="email"         type="text"     title="Email" />
+    </fields>
+
+</DataSource>

@@ -118,6 +118,15 @@ class Const {
     }
 
     /**
+     * Directory name for RPC example.
+     *
+     * @type {string}
+     */
+    static get RPC() {
+        return "rpc";
+    }
+
+    /**
      * Temporary directory name for extracting SmartClient runtime.
      *
      * @type {string}

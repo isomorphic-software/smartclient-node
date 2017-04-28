@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SmartClient example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>window.isc_useSimpleNames = false;</script>
+        <script>window.isomorphicDir = 'isomorphic/';</script>
+        <script src=isomorphic/system/modules/ISC_Core.js></script>
+        <script src=isomorphic/system/modules/ISC_Foundation.js></script>
+        <script src=isomorphic/system/modules/ISC_Containers.js></script>
+        <script src=isomorphic/system/modules/ISC_Grids.js></script>
+        <script src=isomorphic/system/modules/ISC_Forms.js></script>
+        <script src=isomorphic/system/modules/ISC_DataBinding.js></script>
+        <script src=isomorphic/system/modules/ISC_Calendar.js></script>
+        <script src=isomorphic/skins/Enterprise/load_skin.js></script>
+    </head>
+    <body>
+        <script>
+            var initView = function() {
+                isc.IButton.create({
+                    title: "Hello RPC",
+                    top: 0,
+                    width: 150,
+                    click: function() {
+                        isc.RPCManager.sendRequest({
+                            data: {
+                                className: "/rpc/RPCTest"
+                            },
+                            transport: "xmlHttpRequest",
+                            callback: function(rpcResponse, data, rpcRequest) {
+                                alert("Response:\n\n" + data);
+                            }
+                        });
+                    }
+                });
+                isc.IButton.create({
+                    title: "Hello RPC (method)",
+                    top: 0,
+                    left: 150,
+                    width: 150,
+                    click: function() {
+                        isc.RPCManager.sendRequest({
+                            data: {
+                                className: "/rpc/RPCTest",
+                                methodName: "executeWithResponse"
+                            },
+                            transport: "xmlHttpRequest",
+                            callback: function(rpcResponse, data, rpcRequest) {
+                                alert("Response:\n\n" + data);
+                            }
+                        });
+                    }
+                });
+                isc.ListGrid.create({
+                    ID: "userList",
+                    top: 30,
+                    width: 750,
+                    height: 200,
+                    canEdit: true,
+                    canRemoveRecords: true,
+                    alternateRecordStyles: true,
+                    emptyCellValue: "--",
+                    dataSource: "jsonUsersDS",
+                    autoFetchData: true
+                });
+                isc.IButton.create({
+                    title: "New",
+                    top: 250,
+                    click: function() {
+                        userList.startEditingNew();
+                    }
+                });
+                isc.IButton.create({
+                    title: "Refresh",
+                    top: 250,
+                    left: 100,
+                    click: function() {
+                        userList.invalidateCache();
+                    }
+                });
+            };
+            isc.DataSource.load("jsonUsersDS", initView);
+        </script>
+    </body>
+</html>
