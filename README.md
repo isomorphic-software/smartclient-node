@@ -6,7 +6,7 @@
 - Initialize package.json with `npm init`
 - Add [smartclient-node](https://github.com/isomorphic-software/smartclient-node.git) to your Node.js project.
 ```
-npm install -S git://github.com/isomorphic-software/smartclient-node.git
+npm install -S smartclient-node
 ```
 Installation process will ask following questions - accept defaults:
 ```
@@ -25,7 +25,7 @@ Instalation process can be repeated by running installed script `./node_modules/
 
 ### Configuration
 Installation process creates configuration file [conf/config.properties](conf/config.properties).
-Update this file with your values
+Update this file with your values.
 Server should be restarted for changes to take effect.
 
 ### Current status

@@ -24,12 +24,12 @@
     "dependencies": {
         "fs-extra": "^2.1.2",
         "unzip": "^0.1.11",
-        "srv-core": "git://github.com/Aleksandras-Novikovas/srv-core.git",
-        "srv-config": "git://github.com/Aleksandras-Novikovas/srv-config.git",
-        "srv-log": "git://github.com/Aleksandras-Novikovas/srv-log.git",
-        "srv-server": "git://github.com/Aleksandras-Novikovas/srv-server.git",
-        "srv-util": "git://github.com/Aleksandras-Novikovas/srv-util.git",
-        "smartclient-rpc": "git://github.com/isomorphic-software/smartclient-rpc.git"
+        "srv-core": "^0.0.1",
+        "srv-config": "^0.0.1",
+        "srv-log": "^0.0.1",
+        "srv-server": "^0.0.1",
+        "srv-util": "^0.0.1",
+        "smartclient-rpc": "^0.0.1"
     },
     "devDependencies": {}
 }
