@@ -60,7 +60,7 @@ class Install {
         });
         rl.on("SIGINT", function() {
             // Exit with error if Control-C pressed
-            process.exit(-1);
+            process.exit(0);
         });
         // Request destination directory
         rl.question("Destination directory [" + p + "]: ", function(answer) {
