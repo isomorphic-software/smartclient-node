@@ -40,10 +40,9 @@ Server should be restarted for changes to take effect.
     - Filtering with Advanced criteria
 - Supports JSON data source: data is stored in file in JSON format
     - CRUD operations
-    - NO paging \- always returns whole dataset
-    - NO sorting
-    - NO filtering \- returned records are in same order as in file
+    - always returns whole dataset
+    - client side sorting
+    - client side filtering
 
 ### TODO
-- Finish REST request processing
 - Add data source for MongoDB
