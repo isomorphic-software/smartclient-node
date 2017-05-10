@@ -150,7 +150,7 @@ class Const {
      * @type {string}
      */
     static get SMART_CLIENT_RUNTIME_NAME() {
-        return "SmartClient_SNAPSHOT_v111d_2017-04-27_Evaluation";
+        return "SmartClient_SNAPSHOT_v111d_2017-05-10_Evaluation";
     }
 
     /**
@@ -159,7 +159,7 @@ class Const {
      * @type {string}
      */
     static get SMART_CLIENT_LINK() {
-        return "http://www.smartclient.com/builds/SmartClient/11.1d/Eval/2017-04-27/" + Const.SMART_CLIENT_RUNTIME_NAME + ".zip";
+        return "http://www.smartclient.com/builds/SmartClient/11.1d/Eval/2017-05-10/" + Const.SMART_CLIENT_RUNTIME_NAME + ".zip";
     }
 
     /**
